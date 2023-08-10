@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bangers', cursive;
+}
+
+body {
+    background-image: url('../static/menu/black-bg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    padding: 0.5em;
+    font-size: 120px;
+    font-family: 'Bangers', cursive;
+}
+
+#menu {
+    padding: 0.8em;
+    color: white;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    text-align: right;
+}
+  
+#menu button {
+    padding: 0.8em;
+    background-color: transparent;
+    border: none;
+    color: #C95545;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+  
+#menu button:hover {
+    transform: scale(1.5);
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    border: 5px solid black;
+    font-family: 'Bangers', cursive;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+}
+
+img {
+    display: none;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+}
+
+.header {
+    animation-name: breathing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+form {
+    display: none;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+form label {
+    text-align: center;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 100px;
+    font-size: 1.5em;
+}
+  
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#name-form button {
+    padding: 0.4em;
+    background-color: transparent;
+    border: none;
+    color: #C95545;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+} 
+
+#name-form button:hover {
+    opacity: 0.8;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: black;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    font-weight: 100;
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    font-weight: 100;
+    color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    font-weight: 100;
+    color: black;
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    color: #009879;
+}
+
+#back-to-main {
+    padding: 0.4em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+}
+
+#back-to-main:hover {
+    opacity: 0.8;
+}
+
+#back-to-main-versus {
+    display: none;
+    padding: 0.4em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+}
+
+#back-to-main-versus:hover {
+    opacity: 0.8;
+}
