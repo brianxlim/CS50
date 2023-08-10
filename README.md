@@ -23,7 +23,7 @@ Raijin, inspired by the character Raiden from the game _Mortal Kombat_, was name
 
 During the later stages of the project, I encountered a significant issue with the raw player spritesheets. Specifically, I discovered that there was a considerable amount of blank space surrounding each player sprite, which made it difficult to draw them accurately in the game. In order to resolve this problem, I had to use GIMP to resize each player sprite individually, removing the excess space from their respective spritesheets. While effective, this process was incredibly time-consuming and required a significant amount of attention to detail.
 
-![Image Resize Process](/finalProject/static/forReadMe/imageResizeProcess.png)
+![Image Resize Process](/static/forReadMe/imageResizeProcess.png)
 
 ### ----- Character Select ----- 
 Once I had selected the player sprites and finalized their unique attack properties, my next step was to create an attractive character select screen that would precede the actual game. To achieve this, I spent a significant amount of time researching various HTML and CSS techniques on YouTube, experimenting with different colors and layouts until I arrived at a visually appealing design that complemented each of the character sprites.
@@ -60,7 +60,7 @@ By incorporating these unique attack properties that align with each character's
 ### ----- Enemies ----- 
 In my search for player sprites, I also kept an eye out for potential enemy sprites and experimented with several to determine the most suitable ones. I had two important considerations before making my final selections: ensuring that the enemies were of different types to prevent monotony and making sure that they wouldn't make the game too difficult for players. After careful consideration, I settled on the 'Goblin', a land melee enemy, the 'Flying Eye', a flying melee enemy, and the 'Fire Worm', a land ranged enemy.
 
-![Enemies](/finalProject/static/forReadMe/enemies.png)
+![Enemies](/static/forReadMe/enemies.png)
 
 Like the player spritesheets, the enemy spritesheets also suffered from an excess of space around each frame of the enemy sprite. In addition, there was a problem with the direction that the enemies faced - they were supposed to face the player, requiring the spritesheet to be flipped vertically. This resulted in the supposed first frame of the spritesheet on the left becoming the last frame on the right of the image. Rather than rearranging each frame individually, I chose to modify my animating algorithm for the enemy sprites, animating from the last frame to the first frame.
 
@@ -104,7 +104,7 @@ In addition to their distinct movements, each enemy type also had different prop
 ### ----- Background ----- 
 The forest background I discovered on [_Itch.io_](https://itch.io/game-assets/free "Itch.io") was ideal for my purposes as it was composed of numerous layers, which allowed me to create a captivating and dynamic parallax effect.
 
-![Background](/finalProject/static/forest/arcadeBG.png)
+![Background](/static/forest/arcadeBG.png)
 
 To create a visually appealing and immersive gameplay experience, I utilized the parallax effect by implementing multiple layers of the background that move at varying speeds. This creates a sense of depth and dynamism, which enhances the gameplay experience for the players. I accomplished this by developing a JavaScript 'Layer' class that takes in an 'image' and 'speedModifier' argument. The image argument specifies which image to draw, while the speedModifier factor is multiplied by the main game scroll speed to determine how fast or slow that particular layer moves.
 
@@ -113,14 +113,14 @@ Furthermore, I strategically positioned the top of the screen to provide ample r
 ### ----- Particles ----- 
 After completing the core game mechanics, I decided to enhance the game's overall experience by adding additional effects. These effects included a running trail that would follow the player as they move, a landing cloud that appears when the player lands after a jump, and floating messages that display how many points or energy the player earns from killing an enemy. Certain effects were unique to specific enemies, such as a boom cloud that appears only when a Flying Eye is defeated.
 
-![Particles](/finalProject/static/forReadMe/particles.png)
+![Particles](/static/forReadMe/particles.png)
 
 To implement these particle effects, I integrated the logic for particles into the game's state management code. For instance, when the player is in the running state, the game creates running trail particles that follow the player's movement. By adding these details, I was able to create a more engaging and immersive game experience for the players.
 
 ### ----- Server and Leaderboard ----- 
 As I approached the final phase of my game development project, I realized that incorporating a leaderboard system would significantly enhance the gaming experience for players by giving players a way to track their progress and adding an extra layer of competition and motivation to the game. Therefore, I set out to create a leaderboard that would store the high scores of players and allow them to compare their scores with others. I began by creating a visually appealing HTML page with a well-designed table layout using CSS to display the high scores.
 
-![Leaderboard](/finalProject/static/forReadMe/leaderboard.png)
+![Leaderboard](/static/forReadMe/leaderboard.png)
 
 On the backend, I had to connect the player's name submission form to a database. Initially, I planned on using flask to establish a connection with an SQL database. However, after conducting some research and experimentation, I found that it would be more efficient to use flask and a simple JSON file to store the names and scores of past players. To accomplish this, I had to learn how to utilize JavaScript to send a POST request to my flask server. 
 
@@ -204,7 +204,7 @@ cards.forEach(card => { // Card is the player card on the character select scree
 ### ----- Background -----
 To add more depth and variation to the gameplay, I decided to introduce two platforms that players could stand on and jump between. This not only adds a layer of strategy to the game, but also breaks up the monotony of player movement. I put a lot of thought into the design of these platforms, taking into account factors such as when players can land on them, to avoid getting stuck when jumping, and how far players can move on the platform before falling, to prevent players from appearing to float in mid-air. These platforms provide players with more opportunities for evasion and attack, and help to make the gameplay more engaging and dynamic.
 
-![Background](/finalProject/static/forest/versusBG.png)
+![Background](/static/forest/versusBG.png)
 
 ### ----- State Management -----
 Designing the multiplayer mode was an important aspect of the project, requiring the creation of a mirrored version of every state for the characters, as players would now be facing left instead of right. However, this led to some irregular glitching movements, as the sprites had size differences between states. Overcoming this challenge required extensive experimentation and offsetting the size differences for each state across all three characters, making it one of the most tedious tasks in the project.
