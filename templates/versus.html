@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../static/ippoFavicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/styles.css">
+        <title>CS50 FP: Versus</title>
+    </head>
+
+    <body>
+        <!-- Raijin --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="RaijinIdle" src="../static/raijin/Sprite/Idle.png"> <!-- 7 / 0.25 / 395x500 -->
+        <img id="RaijinRun" src="../static/raijin/Sprite/Run.png"> <!-- 7 / 0.34 / 400x431 -->
+        <img id="RaijinAtk1" src="../static/raijin/Sprite/Attack1.png"> <!-- 5 / 0.53 / 397x350 -->
+        <img id="RaijinAtk2" src="../static/raijin/Sprite/Attack2.png"> <!-- 5 / 0.65 / 397.5x226 -->
+        <img id="RaijinDeath" src="../static/raijin/Sprite/Death.png"> <!-- 5 / 0.29 / 397.5x445 -->
+        <img id="RaijinFall" src="../static/raijin/Sprite/Fall.png"> <!-- 1 / 0.35 / 400x388 -->
+        <img id="RaijinJump" src="../static/raijin/Sprite/Jump.png"> <!-- 1 / 0.28 / 400x426 -->
+        <img id="RaijinHit" src="../static/raijin/Sprite/TakeHit.png"> <!-- 3 / 0.31 / 400x444 -->
+
+        <img id="RaijinIdleLeft" src="../static/raijin/Sprite/flipped/IdleLeft.png"> <!-- 7 / 0.25 / 400x520 -->
+        <img id="RaijinRunLeft" src="../static/raijin/Sprite/flipped/RunLeft.png"> <!-- 7 / 0.32 / 400x446 -->
+        <img id="RaijinAtk1Left" src="../static/raijin/Sprite/flipped/Attack1Left.png"> <!-- 5 / 0.55 / 397x275  -->
+        <img id="RaijinAtk2Left" src="../static/raijin/Sprite/flipped/Attack2Left.png"> <!-- 5 / 0.65 / 400x226 -->
+        <img id="RaijinDeathLeft" src="../static/raijin/Sprite/flipped/DeathLeft.png"> <!-- 5 / 0.28 / 400x470  -->
+        <img id="RaijinFallLeft" src="../static/raijin/Sprite/flipped/FallLeft.png"> <!-- 1 / 0.35 / 400x388 -->
+        <img id="RaijinJumpLeft" src="../static/raijin/Sprite/flipped/JumpLeft.png"> <!-- 1 / 0.27 / 400x470 -->
+        <img id="RaijinHitLeft" src="../static/raijin/Sprite/flipped/TakeHitLeft.png"> <!-- 3 / 0.3 / 400x475 -->
+
+        <!-- Uzui --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="UzuiIdle" src="../static/uzui/Sprite/Idle.png"> <!-- 3 / 0.23 / 399x520 -->
+        <img id="UzuiRun" src="../static/uzui/Sprite/Run.png"> <!-- 7 / 0.25 / 400x446 -->
+        <img id="UzuiAtk1" src="../static/uzui/Sprite/Attack1.png"> <!-- 3 / 0.53 / 399x281 -->
+        <img id="UzuiAtk2" src="../static/uzui/Sprite/Attack2.png"> <!-- 3 / 0.51 / 399x338 -->
+        <img id="UzuiDeath" src="../static/uzui/Sprite/Death.png"> <!-- 6 / 0.37 / 399x357 -->
+        <img id="UzuiFall" src="../static/uzui/Sprite/Fall.png"> <!-- 1 / 0.24 / 399x520 -->
+        <img id="UzuiJump" src="../static/uzui/Sprite/Jump.png"> <!-- 1 / 0.24 / 399x520 -->
+        <img id="UzuiHit" src="../static/uzui/Sprite/TakeHit.png"> <!-- 2 / 0.24 / 399x520 -->
+
+        <img id="UzuiIdleLeft" src="../static/uzui/Sprite/flipped/IdleLeft.png"> <!-- 3 / 0.23 / 399x520 -->
+        <img id="UzuiRunLeft" src="../static/uzui/Sprite/flipped/RunLeft.png"> <!-- 7 / 0.2 / 400x446 -->
+        <img id="UzuiAtk1Left" src="../static/uzui/Sprite/flipped/Attack1Left.png"> <!-- 3 / 0.54 / 400x276 -->
+        <img id="UzuiAtk2Left" src="../static/uzui/Sprite/flipped/Attack2Left.png"> <!-- 3 / 0.5 / 400x344 -->
+        <img id="UzuiDeathLeft" src="../static/uzui/Sprite/flipped/DeathLeft.png"> <!-- 6 / 0.37 / 400x357 -->
+        <img id="UzuiFallLeft" src="../static/uzui/Sprite/flipped/FallLeft.png"> <!-- 1 / 0.24 / 400x520 -->
+        <img id="UzuiJumpLeft" src="../static/uzui/Sprite/flipped/JumpLeft.png"> <!-- 1 / 0.24 / 400x520 -->
+        <img id="UzuiHitLeft" src="../static/uzui/Sprite/flipped/TakeHitLeft.png"> <!-- 2 / 0.24 / 400x520-->
+
+        <!-- Lee --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="LeeIdle" src="../static/lee/Sprite/Idle.png"> <!-- 9 / 0.28 / 399x373 -->
+        <img id="LeeRun" src="../static/lee/Sprite/Run.png"> <!-- 7 / 0.22 / 398x454 -->
+        <img id="LeeAtk1" src="../static/lee/Sprite/Attack1.png"> <!-- 5 / 0.59 / 397x283 -->
+        <img id="LeeAtk2" src="../static/lee/Sprite/Attack2.png"> <!-- 6 / 0.41 / 398x432 -->
+        <img id="LeeDeath" src="../static/lee/Sprite/Death.png"> <!-- 10 / 0.39 / 400x300 -->
+        <img id="LeeFall" src="../static/lee/Sprite/Fall.png"> <!-- 2 / 0.24 / 400x520 -->
+        <img id="LeeJump" src="../static/lee/Sprite/Jump.png"> <!-- 2 / 0.24 / 392x520 -->
+        <img id="LeeHit" src="../static/lee/Sprite/TakeHit.png"> <!-- 2 / 0.3 / 395x327 -->
+
+        <img id="LeeIdleLeft" src="../static/lee/Sprite/flipped/IdleLeft.png"> <!-- 9 / 0.28 / 400x373 -->
+        <img id="LeeRunLeft" src="../static/lee/Sprite/flipped/RunLeft.png"> <!-- 7 / 0.22 / 400x454  -->
+        <img id="LeeAtk1Left" src="../static/lee/Sprite/flipped/Attack1Left.png"> <!-- 5 / 0.54 / 400x283 -->
+        <img id="LeeAtk2Left" src="../static/lee/Sprite/flipped/Attack2Left.png"> <!-- 6 / 0.41 / 400x360 -->
+        <img id="LeeDeathLeft" src="../static/lee/Sprite/flipped/DeathLeft.png"> <!-- 10 / 0.39 / 400x301 -->
+        <img id="LeeFallLeft" src="../static/lee/Sprite/flipped/FallLeft.png"> <!-- 2 / 0.24 / 400x520  -->
+        <img id="LeeJumpLeft" src="../static/lee/Sprite/flipped/JumpLeft.png"> <!-- 2 / 0.24 / 400x520  -->
+        <img id="LeeHitLeft" src="../static/lee/Sprite/flipped/TakeHitLeft.png"> <!-- 2 / 0.3 / 395x329  -->
+
+        <!-- Particles --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="boom" src="../static/particles/boom.png"> <!-- 4 / 1 / 100x90  -->
+        <img id="dust" src="../static/particles/dust.png">
+
+        <!-- Health bar  -->
+        <img id="emptyBar" src="../static/healthbar/empty.png">
+        <img id="fullHealth" src="../static/healthbar/fullHealth.png">
+        <img id="fullEnergy" src="../static/healthbar/fullMana.png">
+
+        <!-- Background asset -->
+        <img id="versusBackground" src="../static/forest/versusBG.png">
+        <img id="bird" src="../static/forest/PNG/bird.png">
+
+        <canvas id="canvas1"></canvas>
+        <button id="back-to-main-versus">Back to Main Menu</button> <!-- Allow players to navigate back to main menu after game ends -->
+        <h1 id="loading">Loading...</h1>
+        <script type="module" src="../versusModules/main.js"></script>
+    </body>
+</html>

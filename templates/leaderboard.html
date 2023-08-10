@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../static/ippoFavicon.png">
+        <link rel="stylesheet" href="../static/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <title>CS50 FP: Leaderboard</title>
+    </head>
+
+    <body>
+      <button id="back-to-main">Back to Main Menu</button> <!-- Allow players to navigate back to main menu after viewing leaderboard -->
+        <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+      
+            <tbody id="bodytable"></tbody>
+          </table>
+          <script src="../menuModules/leaderboard.js"></script>
+    </body>
+</html>

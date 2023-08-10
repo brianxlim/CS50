@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../static/ippoFavicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/styles.css">
+        <title>CS50 FP: Arcade</title>
+      </head>
+
+      <body>
+        <!-- Raijin --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="RaijinIdle" src="../static/raijin/Sprite/Idle.png"> <!-- 0.21 / 395x500 -->
+        <img id="RaijinRun" src="../static/raijin/Sprite/Run.png"> <!-- 0.3 / 400x431 -->
+        <img id="RaijinAtk1" src="../static/raijin/Sprite/Attack1.png"> <!-- 0.62 / 397x350 -->
+        <img id="RaijinAtk2" src="../static/raijin/Sprite/Attack2.png"> <!-- 0.7 / 397.5x226 -->
+        <img id="RaijinDeath" src="../static/raijin/Sprite/Death.png"> <!-- 0.28 / 397.5x445 -->
+        <img id="RaijinFall" src="../static/raijin/Sprite/Fall.png"> <!-- 0.35 / 400x388 -->
+        <img id="RaijinJump" src="../static/raijin/Sprite/Jump.png"> <!-- 0.3 / 400x426 -->
+        <img id="RaijinHit" src="../static/raijin/Sprite/TakeHit.png"> <!-- 0.3 / 400x444 -->
+
+        <!-- Lee --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="LeeIdle" src="../static/lee/Sprite/Idle.png"> <!-- 9 / 0.33 / 399x373 -->
+        <img id="LeeRun" src="../static/lee/Sprite/Run.png"> <!-- 7 / 0.28 / 398x454 -->
+        <img id="LeeAtk1" src="../static/lee/Sprite/Attack1.png"> <!-- 5 / 0.75 / 397x283 -->
+        <img id="LeeAtk2" src="../static/lee/Sprite/Attack2.png"> <!-- 6 / 0.52 / 398x432 -->
+        <img id="LeeDeath" src="../static/lee/Sprite/Death.png"> <!-- 10 / 0.53 / 400x330 -->
+        <img id="LeeFall" src="../static/lee/Sprite/Fall.png"> <!-- 2 / 0.26 / 400x520 -->
+        <img id="LeeJump" src="../static/lee/Sprite/Jump.png"> <!-- 2 / 0.24 / 392x520 -->
+        <img id="LeeHit" src="../static/lee/Sprite/TakeHit.png"> <!-- 2 / 0.39 / 395x327 -->
+
+        <!-- Uzui --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="UzuiIdle" src="../static/uzui/Sprite/Idle.png"> <!-- 3 / 0.25 / 399x520 -->
+        <img id="UzuiRun" src="../static/uzui/Sprite/Run.png"> <!-- 7 / 0.3 / 400x446 -->
+        <img id="UzuiAtk1" src="../static/uzui/Sprite/Attack1.png"> <!-- 3 / 0.53 / 399x281 -->
+        <img id="UzuiAtk2" src="../static/uzui/Sprite/Attack2.png"> <!-- 3 / 0.53 / 399x338 -->
+        <img id="UzuiDeath" src="../static/uzui/Sprite/Death.png"> <!-- 6 / 0.4 / 399x357 -->
+        <img id="UzuiFall" src="../static/uzui/Sprite/Fall.png"> <!-- 1 / 0.25 / 399x520 -->
+        <img id="UzuiJump" src="../static/uzui/Sprite/Jump.png"> <!-- 1 / 0.25 / 399x520 -->
+        <img id="UzuiHit" src="../static/uzui/Sprite/TakeHit.png"> <!-- 2 / 0.25 / 399x520 -->
+
+        <!-- Enemies -->
+        <img id="FlyingEyeAtk" src="../static/enemies/flyingEye/Attack.png">
+        <img id="FlyingEyeDeath" src="../static/enemies/flyingEye/Death.png">
+        <img id="FlyingEyeFlight" src="../static/enemies/flyingEye/Flight.png">
+
+        <img id="GoblinAtk" src="../static/enemies/goblin/AttackLeft.png">
+        <img id="GoblinDeath" src="../static/enemies/goblin/DeathLeft.png">
+        <img id="GoblinRun" src="../static/enemies/goblin/RunLeft.png">
+        <img id="GoblinHit" src="../static/enemies/goblin/TakeHitLeft.png">
+
+        <img id="WormIdle" src="../static/enemies/worm/Sprite/Idle.png">
+        <img id="WormAtk" src="../static/enemies/worm/Sprite/AttackResized.png">
+        <img id="WormDeath" src="../static/enemies/worm/Sprite/DeathResized.png">
+
+        <img id="FireballExplode" src="../static/enemies/worm/Sprite/fireballExplode.png">
+        <img id="FireballMove" src="../static/enemies/worm/Sprite/fireballMove.png">
+
+        <!-- Particles --> <!-- maxFrames / sizeModifier / spriteWidth x spriteHeight -->
+        <img id="boom" src="../static/particles/boom.png"> <!-- 4 / 1 / 100x90  -->
+        <img id="dust" src="../static/particles/dust.png">
+
+        <!-- Health bar  -->
+        <img id="emptyBar" src="../static/healthbar/empty.png">
+        <img id="fullHealth" src="../static/healthbar/fullHealth.png">
+        <img id="fullEnergy" src="../static/healthbar/fullMana.png">
+
+        <!-- Background assets -->
+        <img id="layer_1" src="../static/forest/PNG/Layer_0000_9.png">
+        <img id="layer_2" src="../static/forest/PNG/Layer_0001_8.png">
+        <img id="layer_3" src="../static/forest/PNG/Layer_0002_7.png">
+        <img id="layer_4" src="../static/forest/PNG/Layer_0003_6.png">
+        <img id="layer_5" src="../static/forest/PNG/Layer_0004_Lights.png">
+        <img id="layer_6" src="../static/forest/PNG/Layer_0005_5.png">
+        <img id="layer_7" src="../static/forest/PNG/Layer_0006_4.png">
+        <img id="layer_8" src="../static/forest/PNG/Layer_0007_Lights.png">
+        <img id="layer_9" src="../static/forest/PNG/Layer_0008_3.png">
+        <img id="layer_10" src="../static/forest/PNG/Layer_0009_2.png">
+        <img id="layer_11" src="../static/forest/PNG/Layer_0010_1.png">
+        <img id="layer_12" src="../static/forest/PNG/Layer_0011_0.png">
+
+        <canvas id="canvas1"></canvas>
+        <form id="name-form" onsubmit="return false;">
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name" placeholder="Name (2 to 8 characters)">
+            <button id="name-form-submit" disabled>Submit</button>
+        </form>
+        <h1 id="loading">Loading...</h1>
+        <script type="module" src="../arcadeModules/main.js"></script>
+    </body>
+</html>
